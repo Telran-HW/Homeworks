@@ -17,6 +17,7 @@ cw19-FuncStreams/
 cw2-jUnit-testing/
 cw20-StreamApi-part2/
 cw21-StreamsApiTerminators/
+cw22-Enum/
 cw3-wrappers-arges/
 cw4-arrays-String/
 cw5-regEx/
@@ -78,3 +79,4 @@ web17/
 web18/
 web19-Streams/
 web20-Terminal-Collectors/
+/.metadata/
