@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -40,30 +41,51 @@ public class EmployeeAppl {
 		// ===============HW21======================
 
 		MethodsEmployee.displayBiggestCompanies(employees);
-		
+
 		System.out.println("============");
 
 		String text = "lmn, vf ab a lmn: ab lmn";
 		displayWordCounts(text);
+		System.out.println("=====1.2=======");
+		displayWordCounts1(text);
+		System.out.println("======2======");
+		String text1 = "a, ab, fr, ab, q, as, a, ert, ert, wer, w, a, q, q, tyu, q";
+		displayWordCounts(text1);
+		System.out.println("=====2.2=======");
+		displayWordCounts1(text1);
 
 	}
 
 	private static void displayWordCounts(String text) {
 
-		String[] texts = text.replaceAll("[!,./:;]+", "").trim().split(" ");
+//		String[] texts = text.replaceAll("[!,./:;]+", "").trim().split(" ");
+		String[] texts = text.split("[^a-zA-Z]+"); //разсплитить по НЕ буквам
 
 		// Map<String, Long> map =
 		Arrays.stream(texts)
-			.collect(Collectors.groupingBy(s -> s, Collectors.counting()))
-			.entrySet()
-			.stream()
-			.sorted((es1, es2) -> {
-					return es1.getValue() != es2.getValue() ? 
-							es2.getValue().compareTo(es1.getValue()) :
-								es1.getKey().compareTo(es2.getKey());
+		//.collect(Collectors.groupingBy(s -> s, Collectors.counting()))
+		.collect(Collectors.toMap(w -> w,  w -> 1, (v1,v2) -> v1+v2))
+			.entrySet().stream()
+				.sorted((es1, es2) -> {
+					return es1.getValue() != es2.getValue() ? es2.getValue().compareTo(es1.getValue())
+							: es1.getKey().compareTo(es2.getKey());
 				})
-			.forEach(System.out::println);
-
+//				.forEach(System.out::println);
+				.forEach(e -> System.out.printf("%s=> %d\n", e.getKey(), e.getValue()));
+	}
+	
+	private static void displayWordCounts1(String text) {
+		
+		String[] words = text.split("[^a-zA-Z]+");
+		
+		Arrays.stream(words)
+			.map(w -> w.trim())
+			.collect(Collectors.groupingBy(w -> w, Collectors.counting()))
+			.entrySet().stream()
+			.sorted(Map.Entry.<String, Long>comparingByValue().reversed()
+					.thenComparing(Map.Entry.<String, Long>comparingByKey()))
+			.forEach(e -> System.out.println(e.getKey() + " => " + e.getValue()));
+		
 	}
 
 	private static void sportLoto(int min, int max, int numberDigits) {

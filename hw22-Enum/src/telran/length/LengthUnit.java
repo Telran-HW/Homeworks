@@ -3,7 +3,7 @@ package telran.length;
 
 public enum LengthUnit {
 
-		MM(0.1), CM(1.), M(100.);
+		MM(0.1), CM(1.), DM(10.), M(100.), KM(100_000.);
 		
 		double cmAmount;
 

@@ -54,6 +54,7 @@ public class MethodsEmployee {
 		// делаем коллекцию компания - количество сотрудников
 		Map<String, Long> empMap = employees.stream()
 				.collect(Collectors.groupingBy(e -> e.company, Collectors.counting()));
+				
 
 		// определяем максимальное количество сотрудников по значениям в empMap
 		long max = empMap.values().stream().max(Long::compare).orElse(0L);
