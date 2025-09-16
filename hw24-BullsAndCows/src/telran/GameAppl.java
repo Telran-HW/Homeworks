@@ -17,7 +17,7 @@ public class GameAppl {
 
 		while (!stopGame) {
 			Scanner sc = new Scanner(System.in);
-			System.out.print("Введите четырехзначное число: ");
+			System.out.print("Enter four-digit number: ");
 			int numberUser = sc.nextInt();
 
 			Map<String, Integer> score = BullsAndCowsGame.checkNumbers(n, numberUser);
@@ -25,6 +25,7 @@ public class GameAppl {
 			stopGame = BullsAndCowsGame.isGameFinish(score);
 
 		}
+		System.out.print("You win!");
 	}
 
 }

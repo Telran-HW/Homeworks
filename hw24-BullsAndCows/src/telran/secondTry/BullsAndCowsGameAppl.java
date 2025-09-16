@@ -20,15 +20,15 @@ public class BullsAndCowsGameAppl {
 
 		while (!stopGame) {
 			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter four-digit number: ");
 			int numberUser = sc.nextInt();
 
 			int bulls = countCowsAndBulls(numberSet, numberUser);
 			//System.out.println(bulls);
 			if (bulls == 4)
 				stopGame = true;
-
-
 		}
+		System.out.print("You win!");
 
 	}
 
