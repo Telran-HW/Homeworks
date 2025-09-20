@@ -20,6 +20,7 @@ cw21-StreamsApiTerminators/
 cw22-Enum/
 cw23-DateTime/
 cw24-FileSystemOperetions/
+cw25-Data-IO-Streams/
 cw3-wrappers-arges/
 cw4-arrays-String/
 cw5-regEx/
@@ -61,6 +62,7 @@ hw7-password-exceptions.zip
 hw7-password-exceptions/
 hw8-abstractClasses.zip
 hw8-abstractClasses/
+hw24-version-Konstantin/
 hw9-dynamicArray-v2.zip
 web03.test/
 web04.Array.Strings/
@@ -83,3 +85,4 @@ web19-Streams/
 web20-Terminal-Collectors/
 /.metadata/
 web21-Enum/
+web22-time-date-input-output-streams/
