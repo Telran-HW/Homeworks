@@ -19,28 +19,39 @@ public class CalculatorAppl {
 //		Menu menu =  new Menu(items, io);
 //		menu.runMenu();
 
-		System.out.println("===============HW26==================");
-		System.out.println("=============== - 1 - ==================");
-		
-//		InputOutput ioDate = new ConsoleInputOutput();
-//		Item[] itemsDate = {
-//				new DateAfterBeforeItem(ioDate),
+//		System.out.println("===============HW26==================");
+//		System.out.println("=============== - 1 - ==================");
+//		
+////		InputOutput ioDate = new ConsoleInputOutput();
+////		Item[] itemsDate = {
+////				new DateAfterBeforeItem(ioDate),
+////				new ExitItem()
+////		};
+////		
+////		Menu menuDate =  new Menu(itemsDate, ioDate);
+////		menuDate.runMenu();
+//		
+//		System.out.println("=============== - 2 - ==================");
+//		
+//		InputOutput ioDaysBetween = new ConsoleInputOutput();
+//		Item[] itemsDaysBetween = {
+//				new DaysBetweenItem(ioDaysBetween),
 //				new ExitItem()
 //		};
 //		
-//		Menu menuDate =  new Menu(itemsDate, ioDate);
-//		menuDate.runMenu();
+//		Menu menuDaysBetween =  new Menu(itemsDaysBetween, ioDaysBetween);
+//		menuDaysBetween.runMenu();
 		
-		System.out.println("=============== - 2 - ==================");
-		
-		InputOutput ioDaysBetween = new ConsoleInputOutput();
-		Item[] itemsDaysBetween = {
-				new DaysBetweenItem(ioDaysBetween),
+		InputOutput io = new ConsoleInputOutput();
+		Item[] items = {
+				new CalculatorItem(io),
+				new DateAfterBeforeItem(io),
+				new DaysBetweenItem(io),
 				new ExitItem()
 		};
 		
-		Menu menuDaysBetween =  new Menu(itemsDaysBetween, ioDaysBetween);
-		menuDaysBetween.runMenu();
+		Menu menu =  new Menu(items, io);
+		menu.runMenu();
 	}
 
 }

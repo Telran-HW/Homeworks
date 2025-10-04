@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.function.BiFunction;
 public class DateAfterBeforeItem implements Item {
 	
+	public static final String FORMAT = "yyyy-MM-dd";
+	
 	InputOutput inOut;
 	static Map<String, BiFunction<LocalDate, Long, LocalDate>> mapDates;
 	
@@ -32,7 +34,7 @@ public class DateAfterBeforeItem implements Item {
 
 	@Override
 	public void perform() {
-		LocalDate dateStart = inOut.inputDate("Enter date in format 'yyyy-MM-dd' ", "yyyy-MM-dd");
+		LocalDate dateStart = inOut.inputDate("Enter date in format " + FORMAT, FORMAT);
 		if(dateStart == null) return;
 		Long number = inOut.inputLong("Enter number of days ");
 		if(number == null) return;
