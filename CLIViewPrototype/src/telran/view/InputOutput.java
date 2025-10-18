@@ -8,6 +8,7 @@ import java.util.function.Function;
 public interface InputOutput {
 	
 	String inputString(String prompt);
+	
 	void output(Object object);
 	
 	default Integer inputInteger(String prompt) {

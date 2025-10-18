@@ -1,7 +1,7 @@
 package telran.items.hr;
 
+import telran.employees.api.IProgrammer;
 import telran.employees.dto.Programmer;
-import telran.employees.service.IProgrammer;
 import telran.employees.utils.Config;
 import telran.items.CompanyItem;
 import telran.view.InputOutput;
