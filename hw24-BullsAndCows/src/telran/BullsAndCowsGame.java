@@ -96,8 +96,8 @@ public class BullsAndCowsGame {
 		mapCowsAndBulls.put("cows", cows);
 		mapCowsAndBulls.put("bulls", bulls);
 
-		System.out.println("generated number: " + number + ", user number: " + numUser + ", output: " + cows + " cows; "
-				+ bulls + " bulls");
+//		System.out.println("generated number: " + number + ", user number: " + numUser + ", output: " + cows + " cows; "
+//				+ bulls + " bulls");
 		return mapCowsAndBulls;
 	}
 

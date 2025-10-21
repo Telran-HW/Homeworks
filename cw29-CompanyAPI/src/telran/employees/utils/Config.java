@@ -10,8 +10,8 @@ public class Config {
 	public static final int MIN_SALARY = 6_000;
 	public static final int MAX_SALARY = 150_000;
 	public static final List<String> TECHNOLOGY_LIST = List.of(
-			"Java", 
-			"JavaScript", 
+			"Java",
+			"JavaScript",
 			"NodeJS",
 			"C++",
 			"Go",
